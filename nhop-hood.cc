@@ -1,3 +1,5 @@
+// Author: Vasil Slavov, DBIS Lab, UMKC, 2013
+
 #include <iostream>
 #include <sys/time.h>
 #include <stdio.h>
@@ -421,10 +423,9 @@ revdir(int &sub, int &obj)
 double
 getgtod()
 {
-        static struct timeval gtod_time;
-        gettimeofday(&gtod_time, NULL);
-        return (double)gtod_time.tv_sec
-                + (double)gtod_time.tv_usec / CLOCKS_PER_SEC;
+    static struct timeval gtod_time;
+    gettimeofday(&gtod_time, NULL);
+    return (double)gtod_time.tv_sec + (double)gtod_time.tv_usec / CLOCKS_PER_SEC;
 }
 
 void
